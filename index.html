@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gigi Iconic — Finance Creator, Speaker & Founder of Khori</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-light: #FAF5EE; --bg-section: #F0E8DC; --bg-card: #FFFFFF;
+    --red-primary: #8B1A1A; --red-accent: #A52222; --red-glow: #B01E1E;
+    --gold: #8C5E20; --gold-light: #A0722A; --dark: #1E0E06;
+    --text-body: #3D2410; --text-muted: #7A6050;
+    --stripe: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(139,26,26,0.04) 18px, rgba(139,26,26,0.04) 36px);
+  }
+  html { scroll-behavior: smooth; }
+  body { background-color: var(--bg-light); color: var(--dark); font-family: 'Montserrat', sans-serif; line-height: 1.6; overflow-x: hidden; }
+  .marquee-banner { background-color: var(--red-primary); background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(0,0,0,0.08) 8px, rgba(0,0,0,0.08) 16px); padding: 10px 0; overflow: hidden; white-space: nowrap; border-bottom: 2px solid rgba(140,94,32,0.3); }
+  .marquee-track { display: inline-block; animation: marquee 22s linear infinite; }
+  .marquee-banner span { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #D4BC9A; padding: 0 36px; }
+  .marquee-banner .dot { color: rgba(250,245,238,0.4); padding: 0 4px; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding: 18px 60px; display: flex; justify-content: space-between; align-items: center; background: rgba(250,245,238,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(139,26,26,0.12); transition: all 0.3s ease; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; font-weight: 700; color: var(--dark); text-decoration: none; letter-spacing: 1px; }
+  .nav-logo span { color: var(--red-primary); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--red-primary); }
+  .nav-cta { background: var(--red-primary); color: #FAF5EE !important; padding: 10px 22px; border-radius: 4px; font-weight: 700 !important; transition: background 0.3s !important; }
+  .nav-cta:hover { background: var(--red-accent) !important; color: #FAF5EE !important; }
+  .hero { padding: 160px 60px 100px; background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-section) 60%, var(--bg-light) 100%); position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 60% 0%, rgba(139,26,26,0.07) 0%, transparent 60%); pointer-events: none; }
+  .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .hero-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(140,94,32,0.35); padding: 7px 18px; border-radius: 30px; margin-bottom: 28px; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 900; line-height: 1.1; color: var(--dark); margin-bottom: 22px; }
+  .hero-title em { font-style: italic; color: var(--red-primary); }
+  .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--text-body); line-height: 1.7; margin-bottom: 38px; max-width: 480px; }
+  .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--red-primary); color: #FAF5EE; padding: 16px 36px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: 2px solid var(--red-primary); transition: all 0.25s; box-shadow: 0 4px 16px rgba(139,26,26,0.25); }
+  .btn-primary:hover { background: var(--red-accent); border-color: var(--red-accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139,26,26,0.3); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--red-primary); padding: 16px 36px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: 2px solid rgba(139,26,26,0.3); transition: all 0.25s; }
+  .btn-secondary:hover { border-color: var(--red-primary); background: rgba(139,26,26,0.05); }
+  .hero-image { position: relative; display: flex; justify-content: center; }
+  .hero-photo-frame { width: 440px; height: 540px; border-radius: 220px 220px 24px 24px; overflow: hidden; border: 2px solid rgba(139,26,26,0.15); box-shadow: 0 30px 80px rgba(62,36,16,0.18), 0 0 0 8px rgba(140,94,32,0.08); position: relative; }
+  .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .photo-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, var(--red-primary), #6B1010); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 80px; font-style: italic; color: rgba(250,245,238,0.3); }
+  .photo-placeholder span { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-top: 12px; color: rgba(250,245,238,0.4); }
+  .hero-float { position: absolute; bottom: 36px; left: -24px; background: #fff; border: 1px solid rgba(139,26,26,0.12); border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; gap: 12px; box-shadow: 0 8px 30px rgba(62,36,16,0.12); animation: float 4s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
+  .float-icon { width: 40px; height: 40px; background: var(--red-primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .float-label { font-size: 12px; font-weight: 700; color: var(--dark); }
+  .float-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .hero-stats { display: flex; gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(139,26,26,0.1); }
+  .hstat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--gold); line-height: 1; }
+  .hstat-label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; }
+  .red-band { background: var(--red-primary); background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.07) 10px, rgba(0,0,0,0.07) 20px); padding: 36px 30px; text-align: center; border-top: 2px solid rgba(140,94,32,0.2); border-bottom: 2px solid rgba(140,94,32,0.2); }
+  .red-band h2 { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #FAF5EE; margin-bottom: 8px; }
+  .red-band p { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: #E8D5B0; }
+  .section { padding: 90px 60px; max-width: 1200px; margin: 0 auto; }
+  .section-bg { padding: 90px 60px; background: var(--bg-section); background-image: var(--stripe); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; text-align: center; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; text-align: center; color: var(--dark); margin-bottom: 16px; line-height: 1.2; }
+  .section-title em { font-style: italic; color: var(--red-primary); }
+  .section-sub { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--text-muted); text-align: center; max-width: 600px; margin: 0 auto 56px; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-text p { font-size: 15px; color: var(--text-body); line-height: 1.85; margin-bottom: 18px; font-weight: 300; }
+  .about-text p strong { color: var(--red-primary); font-weight: 600; }
+  .about-quote { background: var(--bg-card); border-left: 4px solid var(--red-primary); border-radius: 0 8px 8px 0; padding: 28px 30px; margin-top: 32px; box-shadow: 0 4px 20px rgba(62,36,16,0.06); }
+  .about-quote p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--dark); line-height: 1.5; margin: 0 !important; }
+  .about-quote cite { display: block; margin-top: 12px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-card { background: var(--bg-card); border: 1px solid rgba(139,26,26,0.12); border-radius: 10px; padding: 28px 24px; text-align: center; position: relative; overflow: hidden; }
+  .stat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--red-primary), transparent); }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+  .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); }
+  .speaking-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 50px; }
+  .topic-card { background: var(--bg-card); border: 1px solid rgba(139,26,26,0.12); border-radius: 10px; padding: 36px 28px; transition: all 0.3s; position: relative; overflow: hidden; }
+  .topic-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--red-primary), var(--red-accent)); }
+  .topic-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(62,36,16,0.1); }
+  .topic-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--red-primary), var(--red-accent)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 22px; box-shadow: 0 4px 14px rgba(139,26,26,0.25); }
+  .topic-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+  .topic-card p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+  .speaking-cta { background: var(--bg-card); border: 1px solid rgba(139,26,26,0.15); border-radius: 12px; padding: 48px; text-align: center; max-width: 700px; margin: 0 auto; }
+  .speaking-cta h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 900; color: var(--dark); margin-bottom: 12px; }
+  .speaking-cta p { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--text-muted); margin-bottom: 28px; }
+  .khori-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 50px; }
+  .feature-card { background: rgba(139,26,26,0.06); border: 1px solid rgba(139,26,26,0.15); border-radius: 10px; padding: 36px 28px; transition: all 0.3s; }
+  .feature-card:hover { background: rgba(139,26,26,0.1); transform: translateY(-4px); }
+  .feature-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--red-primary), var(--red-accent)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 22px; box-shadow: 0 4px 14px rgba(139,26,26,0.25); }
+  .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+  .feature-card p { font-size: 13px; color: var(--text-body); line-height: 1.7; }
+  .newsletter-box { background: var(--bg-card); border: 1px solid rgba(139,26,26,0.15); border-radius: 16px; padding: 60px; max-width: 720px; margin: 0 auto; text-align: center; box-shadow: 0 8px 40px rgba(62,36,16,0.08); position: relative; overflow: hidden; }
+  .newsletter-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red-primary), var(--gold), var(--red-primary)); }
+  .newsletter-box h3 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: var(--dark); margin-bottom: 12px; }
+  .newsletter-box h3 em { font-style: italic; color: var(--red-primary); }
+  .newsletter-box p { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--text-muted); margin-bottom: 32px; }
+  .newsletter-form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
+  .newsletter-form input { flex: 1; padding: 16px 20px; border: 1px solid rgba(139,26,26,0.2); border-radius: 4px; font-family: 'Montserrat', sans-serif; font-size: 13px; color: var(--dark); background: var(--bg-light); outline: none; transition: border 0.3s; }
+  .newsletter-form input::placeholder { color: var(--text-muted); }
+  .newsletter-form input:focus { border-color: var(--red-primary); }
+  .newsletter-form button { background: var(--red-primary); color: #FAF5EE; border: none; padding: 16px 28px; border-radius: 4px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; white-space: nowrap; }
+  .newsletter-form button:hover { background: var(--red-accent); }
+  .newsletter-note { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-style: italic; }
+  .press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 800px; margin: 0 auto; }
+  .press-card { background: var(--bg-card); border: 1px solid rgba(139,26,26,0.1); border-radius: 10px; padding: 28px; text-align: center; transition: all 0.3s; }
+  .press-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(62,36,16,0.08); border-color: rgba(139,26,26,0.25); }
+  .press-card .media-icon { font-size: 28px; margin-bottom: 12px; }
+  .press-card h4 { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--dark); margin-bottom: 6px; }
+  .press-card p { font-size: 12px; color: var(--text-muted); }
+  .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 700px; margin: 0 auto 50px; }
+  .social-card { background: var(--bg-card); border: 1px solid rgba(139,26,26,0.1); border-radius: 12px; padding: 32px 20px; text-align: center; text-decoration: none; transition: all 0.3s; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .social-card:hover { border-color: var(--red-primary); transform: translateY(-5px); box-shadow: 0 12px 36px rgba(139,26,26,0.12); }
+  .social-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; background: rgba(139,26,26,0.08); transition: all 0.3s; color: var(--red-primary); }
+  .social-card:hover .social-icon { background: var(--red-primary); color: #FAF5EE; }
+  .social-name { font-size: 13px; font-weight: 700; color: var(--dark); }
+  .social-handle { font-size: 12px; color: var(--text-muted); }
+  .media-box { background: var(--red-primary); background-image: repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(0,0,0,0.06) 12px, rgba(0,0,0,0.06) 24px); border-radius: 12px; padding: 44px 40px; max-width: 680px; margin: 0 auto; text-align: center; border: 2px solid rgba(140,94,32,0.3); }
+  .media-box h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #FAF5EE; margin-bottom: 8px; }
+  .media-box p { font-size: 14px; color: #E8D5B0; margin-bottom: 20px; }
+  .media-box a { color: #D4BC9A; text-decoration: none; font-size: 16px; font-weight: 600; border-bottom: 1px solid rgba(212,188,154,0.4); padding-bottom: 2px; transition: color 0.3s; }
+  .media-box a:hover { color: #FAF5EE; }
+  footer { padding: 50px 60px; border-top: 1px solid rgba(139,26,26,0.1); display: flex; justify-content: space-between; align-items: center; background: var(--bg-light); }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-style: italic; font-weight: 700; color: var(--dark); }
+  .footer-logo span { color: var(--red-primary); }
+  .footer-copy { font-size: 12px; color: var(--text-muted); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--red-primary); }
+  .fade-in { opacity: 0; transform: translateY(28px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 1024px) {
+    nav { padding: 16px 30px; } .hero { padding: 130px 30px 80px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 50px; text-align: center; }
+    .hero-title { font-size: 42px; } .hero-sub { margin: 0 auto 30px; }
+    .hero-buttons { justify-content: center; }
+    .hero-photo-frame { width: 340px; height: 420px; margin: 0 auto; }
+    .hero-float { left: 50%; transform: translateX(-50%); }
+    .hero-stats { justify-content: center; }
+    .section { padding: 70px 30px; } .section-bg { padding: 70px 30px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .speaking-grid { grid-template-columns: 1fr; } .khori-grid { grid-template-columns: 1fr; }
+    .press-grid { grid-template-columns: 1fr; } .newsletter-form { flex-direction: column; }
+    .newsletter-box { padding: 40px 28px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 30px; }
+  }
+  @media (max-width: 640px) {
+    .hero-title { font-size: 34px; } .section-title { font-size: 28px; }
+    .nav-links { display: none; } .social-grid { grid-template-columns: 1fr; max-width: 300px; }
+    .about-stats { grid-template-columns: 1fr 1fr; } .hero-photo-frame { width: 280px; height: 350px; }
+  }
+</style>
+</head>
+<body>
+<div class="marquee-banner">
+  <div class="marquee-track">
+    <span>Finance Creator</span><span class="dot">&bull;</span>
+    <span>Public Speaker</span><span class="dot">&bull;</span>
+    <span>Founder of Khori</span><span class="dot">&bull;</span>
+    <span>7-Figure Entrepreneur</span><span class="dot">&bull;</span>
+    <span>Credit &amp; Wealth Strategist</span><span class="dot">&bull;</span>
+    <span>Finance Creator</span><span class="dot">&bull;</span>
+    <span>Public Speaker</span><span class="dot">&bull;</span>
+    <span>Founder of Khori</span><span class="dot">&bull;</span>
+    <span>7-Figure Entrepreneur</span><span class="dot">&bull;</span>
+    <span>Credit &amp; Wealth Strategist</span><span class="dot">&bull;</span>
+  </div>
+</div>
+<nav>
+  <a href="#" class="nav-logo">Gigi <span>Iconic</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#khori">Khori</a></li>
+    <li><a href="#newsletter">Newsletter</a></li>
+    <li><a href="#connect">Connect</a></li>
+    <li><a href="mailto:gigi@icon818.com" class="nav-cta">Book Me</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Finance Creator &bull; Speaker &bull; Entrepreneur</div>
+      <h1 class="hero-title">Hey, I'm <em>Gigi.</em><br>I built wealth from nothing.</h1>
+      <p class="hero-sub">From bad credit and no financial education to a 7-figure business owner. I help everyday people fix their credit, build real wealth, and make money online — because if I figured it out, you can too.</p>
+      <div class="hero-buttons">
+        <a href="#khori" class="btn-primary">Explore Khori <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#speaking" class="btn-secondary">Book Me to Speak</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hstat-num">14</div><div class="hstat-label">Years in the Making</div></div>
+        <div><div class="hstat-num">7-Fig</div><div class="hstat-label">Revenue</div></div>
+        <div><div class="hstat-num">Khori</div><div class="hstat-label">App Coming Soon</div></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-photo-frame">
+        <div class="photo-placeholder">G<span>Your Photo Here</span></div>
+      </div>
+      <div class="hero-float">
+        <div class="float-icon">&#128242;</div>
+        <div><div class="float-label">Khori App</div><div class="float-sub">Coming Soon</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="red-band">
+  <h2>Founder &bull; Creator &bull; Speaker &bull; Strategist</h2>
+  <p>Built a 7-figure business from the ground up — now I'm here to show you how</p>
+</div>
+<section class="section" id="about">
+  <div class="eyebrow fade-in">My Story</div>
+  <h2 class="section-title fade-in">14 years. Bad credit to <em>7 figures.</em></h2>
+  <p class="section-sub fade-in">This isn't a highlight reel. This is the real thing.</p>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p>When my mom had a stroke during my childhood, it changed everything. I knew early on that I wanted to build something that would let me care for her while still making a living — and help people just like us. So I set out to start a homecare business.</p>
+      <p>But <strong>nobody taught me about credit.</strong> Nobody taught me about money. When I tried to get funding for my business in my twenties, I was shut out — bad credit, no financial education, no access to capital. I was crushed.</p>
+      <p>Instead of giving up, I started reading. I educated myself on credit, finances, and investing. I learned that it all starts with mindset and execution. It took me <strong>14 years of grinding, learning, and building</strong> — but today I'm a successful business owner making 7 figures, both online and in traditional business.</p>
+      <p>All because I fixed my credit, got my finances right, and learned simple investing strategies. Now I'm building Khori so your journey doesn't have to take as long as mine.</p>
+      <div class="about-quote">
+        <p>"If I figured it out with nothing — no connections, no handouts, no financial education — you can too. And I'm here to show you exactly how."</p>
+        <cite>— Gigi Iconic</cite>
+      </div>
+    </div>
+    <div class="fade-in">
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-num">14</div><div class="stat-label">Years in the Making</div></div>
+        <div class="stat-card"><div class="stat-num">7-Fig</div><div class="stat-label">Business Owner</div></div>
+        <div class="stat-card"><div class="stat-num">2+</div><div class="stat-label">Businesses Built</div></div>
+        <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">App Coming Soon</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-bg" id="speaking">
+  <div class="section-inner">
+    <div class="eyebrow fade-in">Book Gigi</div>
+    <h2 class="section-title fade-in">Bring <em>Gigi</em> to Your Stage</h2>
+    <p class="section-sub fade-in">From corporate events to conferences, Gigi delivers talks that move audiences and shift money mindsets for good.</p>
+    <div class="speaking-grid">
+      <div class="topic-card fade-in"><div class="topic-icon">&#127908;</div><h3>Credit &amp; Financial Literacy</h3><p>The real talk on credit scores, debt, and how to build a financial foundation that actually lasts — delivered in a way that makes it click.</p></div>
+      <div class="topic-card fade-in"><div class="topic-icon">&#128187;</div><h3>Making Money Online</h3><p>Practical, proven strategies for building income streams in the digital economy — from someone who actually did it without a following or a safety net.</p></div>
+      <div class="topic-card fade-in"><div class="topic-icon">&#129504;</div><h3>Mindset &amp; Entrepreneurship</h3><p>The mental game behind going from nothing to something. How to think, execute, and build when the odds are stacked against you.</p></div>
+    </div>
+    <div class="speaking-cta fade-in">
+      <h3>Ready to Book Gigi?</h3>
+      <p>Available for keynotes, panels, podcasts, corporate events, and community engagements.</p>
+      <a href="mailto:gigi@icon818.com" class="btn-primary">Submit a Speaking Request <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+<section class="section" id="khori">
+  <div class="eyebrow fade-in">Introducing</div>
+  <h2 class="section-title fade-in"><em>Khori</em> — The App I Wish I Had</h2>
+  <p class="section-sub fade-in">I built Khori because I know what it's like to be shut out of opportunities because of bad credit and no financial education. This is the app I wish I had 14 years ago.</p>
+  <div class="khori-grid">
+    <div class="feature-card fade-in"><div class="feature-icon">&#128202;</div><h3>Credit Tracking</h3><p>Monitor your credit score, understand what's helping or hurting it, and get personalized tips to improve fast.</p></div>
+    <div class="feature-card fade-in"><div class="feature-icon">&#128161;</div><h3>Financial Education</h3><p>Bite-sized lessons that actually make sense. No jargon, no fluff — just the knowledge you need to level up.</p></div>
+    <div class="feature-card fade-in"><div class="feature-icon">&#128176;</div><h3>Income Strategies</h3><p>Learn real, proven ways to make money online — from side hustles to full businesses — at your own pace.</p></div>
+  </div>
+  <div style="text-align:center;" class="fade-in">
+    <a href="mailto:gigi@icon818.com" class="btn-primary">Join the Waitlist <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+<div class="section-bg" id="newsletter">
+  <div class="section-inner">
+    <div class="eyebrow fade-in">Stay Connected</div>
+    <h2 class="section-title fade-in">Get the <em>Iconic</em> Newsletter</h2>
+    <p class="section-sub fade-in">Real talk on credit, wealth, and making money online — straight to your inbox. No spam. No fluff.</p>
+    <div class="newsletter-box fade-in">
+      <h3>Join the <em>Iconic</em> Inner Circle</h3>
+      <p>Weekly insights on financial literacy, credit strategy, and online income — the moves I'm actually making.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email address">
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="newsletter-note">No spam. Unsubscribe any time. Your email is safe with me.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="eyebrow fade-in">Media</div>
+  <h2 class="section-title fade-in">Gigi in the <em>Press</em></h2>
+  <p class="section-sub fade-in">Available for press inquiries, podcast features, and media appearances.</p>
+  <div class="press-grid fade-in">
+    <div class="press-card"><div class="media-icon">&#127897;&#65039;</div><h4>Podcast Guest</h4><p>Finance, entrepreneurship &amp; mindset conversations that resonate</p></div>
+    <div class="press-card"><div class="media-icon">&#128250;</div><h4>TV &amp; Media</h4><p>Authoritative voice on personal finance, credit, and wealth building</p></div>
+    <div class="press-card"><div class="media-icon">&#9997;&#65039;</div><h4>Features &amp; Interviews</h4><p>A compelling story that connects with readers and viewers</p></div>
+  </div>
+</section>
+<div class="section-bg" id="connect">
+  <div class="section-inner" style="text-align:center;">
+    <div class="eyebrow fade-in">Follow Along</div>
+    <h2 class="section-title fade-in">Follow the <em>Journey</em></h2>
+    <p class="section-sub fade-in">Daily tips, real talk, and behind-the-scenes of building Khori.</p>
+    <div class="social-grid fade-in">
+      <a href="https://instagram.com/gigiiconic" class="social-card" target="_blank">
+        <div class="social-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        <div class="social-name">Instagram</div><div class="social-handle">@gigiiconic</div>
+      </a>
+      <a href="https://tiktok.com/@gigiiconic" class="social-card" target="_blank">
+        <div class="social-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.84a4.84 4.84 0 01-1-.15z"/></svg></div>
+        <div class="social-name">TikTok</div><div class="social-handle">@gigiiconic</div>
+      </a>
+      <a href="https://facebook.com/gigiiconic" class="social-card" target="_blank">
+        <div class="social-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+        <div class="social-name">Facebook</div><div class="social-handle">Gigi Iconic</div>
+      </a>
+    </div>
+    <div class="media-box fade-in">
+      <h3>Media &amp; Partnerships</h3>
+      <p>For business inquiries, collaborations, speaking requests, and press</p>
+      <a href="mailto:gigi@icon818.com">gigi@icon818.com</a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Gigi <span>Iconic</span></div>
+  <div class="footer-copy">&copy; 2026 ICON818 LLC. All rights reserved.</div>
+  <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(62,36,16,0.08)' : 'none';
+  });
+</script>
+</body>
+</html>
