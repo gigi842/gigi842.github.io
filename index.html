@@ -273,8 +273,8 @@
       <h3>Join the <em>Iconic</em> Inner Circle</h3>
       <p>Weekly insights on financial literacy, credit strategy, and online income — the moves I'm actually making.</p>
       <div class="newsletter-form">
-        <input type="email" placeholder="Enter your email address">
-        <button type="submit">Subscribe</button>
+        <input type="email" id="nl-email" placeholder="Enter your email address">
+        <button type="button" onclick="var e=document.getElementById('nl-email').value; window.location.href='mailto:gigi@icon818.com?subject=Newsletter Signup&body=Hey Gigi, please add me to your newsletter! My email is: '+encodeURIComponent(e);">Subscribe</button>
       </div>
       <p class="newsletter-note">No spam. Unsubscribe any time. Your email is safe with me.</p>
     </div>
